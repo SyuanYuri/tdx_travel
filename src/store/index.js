@@ -53,8 +53,10 @@ export const useStore = defineStore("Main", {
       if (!this.saveState) {
         if (val && this.filterScenicSpotList.length !== 0) {
           this.filterScenicSpotList = this.scenicSpotList.filter(item => item.isActive === true);
+          this.searchCount = this.filterScenicSpotList.length;
         } else {
-          this.filterHotelList = this.hotelList.filter(item => item.isActive === true);;
+          this.filterHotelList = this.hotelList.filter(item => item.isActive === true);
+          this.hotelSearchCount = this.filterHotelList.length;
         }
       } else {
         if (val) {
