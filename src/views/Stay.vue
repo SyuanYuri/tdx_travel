@@ -94,7 +94,7 @@ onMounted(() => {
                 <span v-if="!store.personState" style="white-space: nowrap">{{ $t("__add_people") }}</span>
                 <span v-else style="white-space: nowrap">
                   {{
-                    `${adultsCount} adults + ${kidCount} kids`
+                    `${adultsCount} ${$t("__adults")} + ${kidCount} ${$t("__kids")}`
                   }}
                 </span>
               </a>
